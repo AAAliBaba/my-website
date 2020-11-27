@@ -33,4 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('icons').classList.remove('icons--invisible')
         }
     })
+
+    var extenderIsClicked = false;
+
+    document.getElementById('bio-expander').addEventListener('click', () => {
+        if(!extenderIsClicked) {
+            document.getElementById('welcome-container').className += ' --reveal'
+        }
+        else {
+            document.getElementById('welcome-container').classList.remove('--reveal')
+        }
+        extenderIsClicked = !extenderIsClicked
+    })
 })

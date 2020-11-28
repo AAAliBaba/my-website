@@ -119,10 +119,36 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+    /* border: 1px solid green; */
+}
+
+.extended-bio {
+  height: 150px;
+  width: 30vw;
+  /* border: 1px solid black; */
+  position: absolute;
+  bottom: -150px;
+  text-align: center;
+  padding: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.extended-bio--visible {
+  visibility: visible;
+  opacity: 1;
+  /* color: pink; */
+}
+
+.extended-bio a {
+  font-weight: bold;
+  color: var(--text);
 }
 
 .--reveal {
-  margin-bottom: 100px;
+  margin-top: 150px;
+  transform: rotate(180deg);
 }
 
 #portrait {
@@ -182,7 +208,14 @@ body {
 }
 
 #bio-expander {
-  font-size: 20px;
+  height: 3vh;
+  width: 3vh;
+  z-index: 1;          
+  transition: 0.3s;
+}
+
+#bio-expander:hover {
+  cursor: pointer;
 }
 
 .icons {
@@ -208,6 +241,13 @@ body {
 .icon-card {
   height: 5vh;
   width: 5vh;
+}
+
+#copyright {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  z-index: 1;
 }
 
 /* PROJECTS */

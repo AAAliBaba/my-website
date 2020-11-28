@@ -38,10 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('bio-expander').addEventListener('click', () => {
         if(!extenderIsClicked) {
-            document.getElementById('welcome-container').className += ' --reveal'
+            document.getElementById('bio-expander').className += ' --reveal'
+            document.getElementById('extended-bio').className += ' extended-bio--visible'
+            // document.getElementById('welcome-container').className += ' --reveal'
         }
         else {
-            document.getElementById('welcome-container').classList.remove('--reveal')
+            document.getElementById('bio-expander').classList.remove('--reveal')
+            document.getElementById('extended-bio').classList.remove('extended-bio--visible')
+            // document.getElementById('welcome-container').classList.remove('--reveal')
         }
         extenderIsClicked = !extenderIsClicked
     })

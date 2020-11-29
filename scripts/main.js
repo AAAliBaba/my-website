@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    document.getElementById('welcome-link').click()
+    // document.getElementById('welcome-link').click()
 
     /*
         when the user scrolls past the welcome/about section, portrait in navbar will appear.

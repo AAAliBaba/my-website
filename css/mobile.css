@@ -237,20 +237,23 @@ body {
 
 #project-section {
     display: flex;
-    
+    padding-top: 10vh;
     background: linear-gradient(90deg, var(--bg-light) 0%, var(--bg-dark) 100%);
     height: 100vh;
+    overflow: auto;
     /* justify-content: center;
     align-items: center; */
   }
   
   .project-grid {
+    /* display: flex;
+    overflow-x: auto; */
     /* display: grid;
     grid-template-columns: repeat(2, auto); */
   }
   
   .project-grid-item {
-    height: auto;
+    height: 25vh;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -275,17 +278,18 @@ body {
     bottom: 0;
     padding: 15px;
     color: var(--bg-dark);
-    font-size: 20px;
+    font-size: 2em;
     overflow: hidden;
     transition: 0.5s;
   }
   
   .project-grid-item h3 {
-    margin-bottom: 20px;
+    margin-bottom: 2em;
+    justify-self: center;
   }
   
-  .project-grid-item .project-label:hover {
-    height: 100%;
+  .project-label-clicked {
+    height: 100% !important;
     align-items: flex-start;
   }
   
@@ -297,7 +301,7 @@ body {
   }
   
   .project-grid-item p {
-    font-size: smaller;
+    /* font-size: smaller; */
   }
   
   .project-grid-item a {

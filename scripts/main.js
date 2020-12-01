@@ -49,4 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         extenderIsClicked = !extenderIsClicked
     })
+
+    $(".project-label").on('click', function() {
+        $(this).toggleClass("project-label-clicked")
+    })
 })

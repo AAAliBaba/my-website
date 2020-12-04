@@ -207,6 +207,7 @@ body {
     bottom: 3vh;
     z-index: 1;
     transition: 0.3s;
+    visibility: hidden;
   }
   
   .icons--invisible {

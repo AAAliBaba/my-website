@@ -1,174 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Arafat Arman</title>
-        <!-- <link rel="stylesheet" href="css/main.css"/> -->
-        <link rel="stylesheet" media="screen and (min-width: 1000px)" href="css/main.css">
-        <link rel="stylesheet" media="screen and (max-width: 999px)" href="css/mobile.css">
+        <title>Valentine</title>
+        <link rel="icon" type="image/x-icon" href="images/heart.png">
+        <link rel="stylesheet" href="css/main.css"/>
         <script src="scripts/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+        <img src='images/confetti.gif' id='selector'/>
         <main id="main-doc">
-            <div id="navbar">
-                <div id="nav-portrait" class="nav-portrait">
-                    <img src="images/portrait.png"/>
-                    <p>Arafat Arman</p>
+            <div class="main-div">
+                <div class="title-div">
+                    <h1 id="title">Will You Be My Valentine?</h1>
                 </div>
-                <div class="nav-links">
-                    <a id="welcome-link" href="#welcome-section" class="nav-link">About</a>
-                    <p class="dash">|</p>
-                    <a id="project-link" href="#project-section" class="nav-link">Projects</a>
-                    <p class="dash">|</p>
-                    <a id="contact-link" href="#contact-section" class="nav-link">Contact</a>
+
+                <div class="subtitle-div">
+                    <p id="subtitle">(Rhetorical Question)</p>
+                </div>
+
+                <iframe id="image" src="images/bear1.gif" width="368" height="480" frameBorder="0"></iframe>
+
+                <div class="buttons-div">
+                    <button id="yes-button" class="yes-button" onclick="playSuccessAnimation()">HELL YEAH!!!</button>
+                    <button id="no-button" class="no-button" onmouseover="mouseOverEvent(this)">NO WAY!!!</button>
                 </div>
             </div>
-          
-            <section id="welcome-section">
-                <div id="welcome-container" class="welcome-container">
-                    <img id="portrait" src="images/portrait.png"/>
-                    <div>
-                        <h1 id="name">Arafat Arman</h1>
-                        <div id="bio">
-                            <div class="slider">
-                                <div class="slider-text1">Aspiring Bodybuilder</div>
-                                <div class="slider-text2">Web Developer</div>
-                                <div class="slider-text3">Software Engineer</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="extended-bio" class="extended-bio">
-                        <h4>
-                            B.S Computer Science magna cum laude, The City College of New York (2020)
-                        </h4>
-                        <br/>
-                        <h5>
-                            Currently focused on frontend web development. Dabbling in full-stack development.
-                            <br/>
-                            When I'm not programming, I'm lifting weights or watching anime.
-                            <br/><br/>
-                            <em>"Seek first to understand, then to be understood"</em> -Stephen Covey
-                        </h5>
-                        <br/>
-                        <a href="files/ArafatArmanResume.pdf" target="_blank">View my Resume</a>
-                    </div>
-                </div>
-                <img id="bio-expander" src="images/expand-button.png"/>
-                <div id="icons" class="icons">
-                    <!-- Icons made by <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-                    <a href="https://github.com/AAAliBaba" target="_blank"><img class="icon" src="images/github.png"/></a>
-                    <a href="https://www.linkedin.com/in/arafat-arman-0207a714a/" target="_blank"><img class="icon" src="images/linkedin.png"/></a>
-                </div>
-                <p id="copyright">&#169 Arafat Arman 2020</p>
-            </section>
-
-            <section id="project-section">
-                <div class="project-grid">
-                    <div class="project-grid-item">
-                        <img src="images/project_screenshots/sms.png"/>
-                        <div class="project-label">
-                            <h2>Stock Market Simulator</h2>
-                            <div class="label-body">
-                                <p class="project-description">
-                                    A virtual stock market game developed with a team of 5! Learn the fundamentals of trading using virtual money.
-                                    Create public/private sessions with your friends or classmates and see who can make the most money!
-                                    Inject shocks into the game to simulate real world events, such as crashes or bubbles!
-                                </p>
-                                <a href="https://github.com/StockMarketSimulator-CSC-59867-03/SMSimulator_Website" target="_blank">Check it out!</a>
-                                <div class="tech-stack">
-                                    <p class="tech-element">React</p>
-                                    <p class="tech-element">Express</p>
-                                    <p class="tech-element">Cloud Firestore</p>
-                                    <p class="tech-element">Redux</p>
-                                    <p class="tech-element">Node.js</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-grid-item">
-                        <img src="images/project_screenshots/tweet-watcher.png"/>
-                        <div class="project-label">
-                            <h2>Tweet Watcher</h2>
-                            <div class="label-body">
-                                <p class="project-description">
-                                    Watch a real-time feed of Tweets containing user-inputted words and/or phrases!
-                                </p>
-                                <a href="https://github.com/AAAliBaba/tweet-watcher" target="_blank">Check it out!</a>
-                                <div class="tech-stack">
-                                    <p class="tech-element">React</p>
-                                    <p class="tech-element">Node.js</p>
-                                    <p class="tech-element">Socket.io</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-grid-item">
-                        <img src="images/project_screenshots/minesweeper.png"/>
-                        <div class="project-label">
-                            <h2>Minesweeper</h2>
-                            <div class="label-body">
-                                <p class="project-description">
-                                    Play classic Minesweeper! This was my first React project!
-                                </p>
-                                <a href="https://minesweeper-react-v.herokuapp.com/" target="_blank">Check it out!</a>
-                                <div class="tech-stack">
-                                    <p class="tech-element">React</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-grid-item">
-                        <img src="images/project_screenshots/myanimetracker.png"/>
-                        <div class="project-label">
-                            <h2>MyAnimeTracker</h2>
-                            <div class="label-body">
-                                <p class="project-description">
-                                    A Chrome extension that lets a user track their episode/chapter progress for anime or manga they are watching or reading!
-                                </p>
-                                <a href="https://chrome.google.com/webstore/detail/myanimetracker/nacbkpnddgkkmcllblifchdifigohhoc">Check it out!</a>
-                                <div class="tech-stack">
-                                    <p class="tech-element">Chrome Extension</p>
-                                    <p class="tech-element">HTML</p>
-                                    <p class="tech-element">CSS</p>
-                                    <p class="tech-element">JavaScript</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact-section">
-                <div class="contact-container">
-                    <div class="contact-card">
-                        <a href="https://github.com/AAAliBaba" target="_blank"><img class="icon-card" src="images/github.png"/></a>
-                        <div class="card-div"></div>
-                        <div class="card-text">
-                            <p>You can find the source code to my many projects here</p>
-                            <p>Let's <strong>collaborate</strong>!</p>
-                            <a href="https://github.com/AAAliBaba" target="_blank" class="card-link"><p>github.com/AAAliBaba</p></a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <img class="icon-card" src="images/gmail.png"/>
-                        <div class="card-div"></div>
-                        <div class="card-text">
-                            <p>Feel free to directly contact me through email for any inquiries</p>
-                            <p>Let's <strong>chat</strong>!</p>
-                            <p class="card-link">arafatarman616@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <a href="https://www.linkedin.com/in/arafat-arman-0207a714a/" target="_blank"><img class="icon-card" src="images/linkedin.png"/></a>
-                        <div class="card-div"></div>
-                        <div class="card-text">
-                            <p>Add me to your network for future collaborations</p>
-                            <p>Let's <strong>connect</strong>!</p>
-                            <a href="https://www.linkedin.com/in/arafat-arman-0207a714a/" target="_blank" class="card-link"><p>linkedin.com/in/arafat-arman-0207a714a</p></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
     </body>
 </html>
